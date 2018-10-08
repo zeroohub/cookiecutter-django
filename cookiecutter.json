@@ -15,8 +15,8 @@
   ],
   "timezone": "UTC",
   "windows": "n",
-  "use_pycharm": "n",
-  "use_docker": "n",
+  "use_pycharm": "y",
+  "use_docker": "y",
   "postgresql_version": [
     "10.4",
     "10.3",

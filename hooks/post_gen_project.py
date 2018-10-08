@@ -284,11 +284,6 @@ def main():
     if "{{ cookiecutter.use_pycharm }}".lower() == "n":
         remove_pycharm_files()
 
-    if "{{ cookiecutter.use_docker }}".lower() == "y":
-        remove_utility_files()
-    else:
-        remove_docker_files()
-
     if "{{ cookiecutter.use_heroku }}".lower() == "n":
         remove_heroku_files()
 
