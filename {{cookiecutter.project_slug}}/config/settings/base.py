@@ -37,15 +37,9 @@ USE_TZ = True
 # DATABASES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
-{% if cookiecutter.use_docker == 'y' -%}
 DATABASES = {
-    'default': env.db('DATABASE_URL'),
+    'default': env.db('DATABASE_URL', default='postgres://debug:debug@localhost:5432/{{cookiecutter.project_slug}}'),
 }
-{%- else %}
-DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres://user:pass@localhost:5432/{{cookiecutter.project_slug}}'),
-}
-{%- endif %}
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
 # URLS
